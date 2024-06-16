@@ -158,3 +158,60 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   
+//   좋아요 카운트 증가
+document.addEventListener('DOMContentLoaded', () => {
+    const togglePhpPdfBtn = document.getElementById('togglePhpPdfBtn');
+    const phpPdf = document.getElementById('phpPdf');
+  
+    const toggleJobPdfBtn = document.getElementById('toggleJobPdfBtn');
+    const jobPdf = document.getElementById('jobPdf');
+  
+    const toggleBoardPdfBtn = document.getElementById('toggleBoardPdfBtn');
+    const boardPdf = document.getElementById('boardPdf');
+  
+    togglePhpPdfBtn.addEventListener('click', () => {
+      if (phpPdf.style.display === 'none' || phpPdf.style.display === '') {
+        phpPdf.style.display = 'block';
+      } else {
+        phpPdf.style.display = 'none';
+      }
+    });
+  
+    toggleJobPdfBtn.addEventListener('click', () => {
+      if (jobPdf.style.display === 'none' || jobPdf.style.display === '') {
+        jobPdf.style.display = 'block';
+      } else {
+        jobPdf.style.display = 'none';
+      }
+    });
+  
+    toggleBoardPdfBtn.addEventListener('click', () => {
+      if (boardPdf.style.display === 'none' || boardPdf.style.display === '') {
+        boardPdf.style.display = 'block';
+      } else {
+        boardPdf.style.display = 'none';
+      }
+    });
+  
+    // Like button functionality
+    const likeBtn = document.getElementById('likeBtn');
+    const likeCount = document.getElementById('likeCount');
+    let count = 0;
+  
+    likeBtn.addEventListener('click', () => {
+      count++;
+      likeCount.textContent = count;
+  
+      // Create heart element
+      const heart = document.createElement('span');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      likeBtn.appendChild(heart);
+  
+      // Remove heart after animation
+      heart.addEventListener('animationend', () => {
+        heart.remove();
+      });
+    });
+  });
+  
