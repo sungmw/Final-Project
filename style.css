@@ -407,3 +407,24 @@ footer {
   .study_img img:hover {
     transform: scale(1.1);
   }
+
+
+  /* 버튼 수정 */
+  .toggle-btn {
+    background-color: #617891; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it look like a block element */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add cursor pointer on hover */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .toggle-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
