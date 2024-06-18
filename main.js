@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("Portfolio website loaded.");
+  console.log("Portfolio website loaded."); // 웹사이트 로드 시 콘솔에 메시지 출력
 
-  const sections = document.querySelectorAll("section.hidden");
+  const sections = document.querySelectorAll("section.hidden"); // 숨겨진 섹션들을 선택
 
   const options = {
-      threshold: 0.1
+      threshold: 0.1 // 섹션의 10%가 보일 때 콜백 실행
   };
 
+  // 섹션이 보이면 'visible' 클래스를 추가하고, 관찰 중지
   const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -16,21 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }, options);
 
+  // 각 섹션을 관찰
   sections.forEach(section => {
       observer.observe(section);
   });
 
-  const navLinks = document.querySelectorAll("nav ul li a");
+  const navLinks = document.querySelectorAll("nav ul li a"); // 네비게이션 링크 선택
 
+  // 네비게이션 링크 클릭 시 부드럽게 스크롤
   navLinks.forEach(link => {
       link.addEventListener("click", function(event) {
-          event.preventDefault();
-          const targetId = event.currentTarget.getAttribute("href").substring(1);
-          const targetSection = document.getElementById(targetId);
+          event.preventDefault(); // 기본 동작 방지
+          const targetId = event.currentTarget.getAttribute("href").substring(1); // 타겟 섹션 ID
+          const targetSection = document.getElementById(targetId); // 타겟 섹션 선택
 
           window.scrollTo({
-              top: targetSection.offsetTop - document.querySelector('header').offsetHeight,
-              behavior: "smooth"
+              top: targetSection.offsetTop - document.querySelector('header').offsetHeight, // 헤더 높이만큼 보정
+              behavior: "smooth" // 부드러운 스크롤
           });
 
           // 모바일 메뉴를 클릭했을 때 메뉴를 닫도록 추가
@@ -46,36 +49,30 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-
-
-
-
-
-// --------------------
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // 폼 제출 기본 동작 방지
     
-    var userMessage = document.getElementById('userMessage').value;
+    var userMessage = document.getElementById('userMessage').value; // 유저 메시지 값 가져오기
     
-    if(userMessage.trim() === "") {
+    if(userMessage.trim() === "") { // 메시지가 빈 경우 알림 표시
       alert("댓글을 입력해주세요!");
       return;
     }
   
     // 폼 제출 시 메시지 확인 및 리셋
-    document.getElementById('messageBox').style.display = 'block';
-    document.getElementById('userMessage').value = '';
+    document.getElementById('messageBox').style.display = 'block'; // 메시지 박스 표시
+    document.getElementById('userMessage').value = ''; // 입력 필드 리셋
   
     // 3초 후 메시지 박스를 숨김
     setTimeout(function() {
       document.getElementById('messageBox').style.display = 'none';
     }, 3000);
-  });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const links = document.querySelectorAll('.study_img .link img'); // 이미지 링크 선택
   
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const links = document.querySelectorAll('.study_img .link img');
-  
+    // 이미지에 마우스 오버 시 확대, 아웃 시 원래 크기로
     links.forEach(link => {
       link.addEventListener('mouseover', () => {
         link.style.transform = 'scale(1.1)';
@@ -85,12 +82,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         link.style.transform = 'scale(1)';
       });
     });
-  });
+});
 
-
-
-  
-//   좋아요 카운트 증가 및 pdf 버튼
 document.addEventListener('DOMContentLoaded', () => {
     const togglePhpPdfBtn = document.getElementById('togglePhpPdfBtn');
     const phpPdf = document.getElementById('phpPdf');
@@ -101,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBoardPdfBtn = document.getElementById('toggleBoardPdfBtn');
     const boardPdf = document.getElementById('boardPdf');
   
+    // PHP PDF 토글 버튼 기능
     togglePhpPdfBtn.addEventListener('click', () => {
       if (phpPdf.style.display === 'none' || phpPdf.style.display === '') {
         phpPdf.style.display = 'block';
@@ -109,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   
+    // Job PDF 토글 버튼 기능
     toggleJobPdfBtn.addEventListener('click', () => {
       if (jobPdf.style.display === 'none' || jobPdf.style.display === '') {
         jobPdf.style.display = 'block';
@@ -117,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   
+    // Board PDF 토글 버튼 기능
     toggleBoardPdfBtn.addEventListener('click', () => {
       if (boardPdf.style.display === 'none' || boardPdf.style.display === '') {
         boardPdf.style.display = 'block';
@@ -124,77 +120,25 @@ document.addEventListener('DOMContentLoaded', () => {
         boardPdf.style.display = 'none';
       }
     });
-  
-    // Like button functionality
+
+    // 좋아요 버튼 기능
     const likeBtn = document.getElementById('likeBtn');
     const likeCount = document.getElementById('likeCount');
     let count = 0;
   
     likeBtn.addEventListener('click', () => {
-      count++;
-      likeCount.textContent = count;
+      count++; // 좋아요 카운트 증가
+      likeCount.textContent = count; // 좋아요 카운트 업데이트
   
-      // Create heart element
+      // 하트 요소 생성 및 추가
       const heart = document.createElement('span');
       heart.classList.add('heart');
       heart.textContent = '❤️';
       likeBtn.appendChild(heart);
   
-      // Remove heart after animation
+      // 애니메이션 종료 후 하트 제거
       heart.addEventListener('animationend', () => {
         heart.remove();
       });
     });
-  });
-  
-
-  // 설문조사
-  document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    const messageBox = document.getElementById('messageBox');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      messageBox.style.display = 'block';
-    });
-
-    const likeBtn = document.getElementById('likeBtn');
-    const likeCount = document.getElementById('likeCount');
-    let likes = 0;
-
-    likeBtn.addEventListener('click', () => {
-      likes++;
-      likeCount.textContent = likes;
-    });
-
-    const stars = document.querySelectorAll('.star');
-    let selectedRating = 0;
-
-    stars.forEach(star => {
-      star.addEventListener('click', () => {
-        selectedRating = star.getAttribute('data-value');
-        stars.forEach(s => s.classList.remove('selected'));
-        star.classList.add('selected');
-        for (let i = 0; i < selectedRating; i++) {
-          stars[i].classList.add('selected');
-        }
-      });
-    });
-
-    const surveyForm = document.getElementById('surveyForm');
-    const surveyMessageBox = document.getElementById('surveyMessageBox');
-
-    surveyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const visitAgain = document.querySelector('input[name="visitAgain"]:checked')?.value;
-
-      if (selectedRating && visitAgain) {
-        surveyMessageBox.style.display = 'block';
-      } else {
-        alert('모든 항목을 입력해 주세요.');
-      }
-    });
-  });
-
-
-  
+});

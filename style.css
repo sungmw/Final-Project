@@ -1,556 +1,482 @@
-/* 특정 요소에 글꼴 설정 */
-ul.clearfix li h3,
-ul.experience-list li,
-ul.military-list li {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-/* 다른 글꼴 스타일을 지정할 수 있습니다 */
-ul.experience-list li i,
-ul.military-list li i {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
+/* 전역 스타일 */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif; /* 기본 글꼴 및 간격 설정 */
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  background-color: #f4f4f4; /* 배경색 설정 */
+  color: #333; /* 기본 텍스트 색상 설정 */
 }
 
-/* 고정 헤더 스타일 */
+/* 헤더 스타일 */
 header {
-  background-color: #333;
-  color: white;
-  padding: 1em 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  background-color: #333; /* 헤더 배경색 */
+  color: white; /* 헤더 텍스트 색상 */
+  padding: 1em 0; /* 세로 패딩 */
+  position: fixed; /* 상단에 고정 */
+  top: 0; /* 상단에 붙임 */
+  left: 0; /* 좌측에 붙임 */
+  width: 100%; /* 전체 너비 */
+  z-index: 1000; /* 쌓임 순서 */
 }
 
 /* 네비게이션 스타일 */
 nav {
-  background-color: #333;
-  padding: 10px 0;
-  text-align: center;
+  background-color: #333; /* 네비게이션 배경색 */
+  padding: 10px 0; /* 세로 패딩 */
+  text-align: center; /* 가운데 정렬 */
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* 목록 스타일 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+  display: inline-block; /* 인라인으로 표시 */
+  margin: 0 10px; /* 아이템 간 마진 설정 */
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: white; /* 링크 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  padding: 10px 15px; /* 링크 주변 패딩 */
+  border-radius: 5px; /* 둥근 테두리 */
+  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #555; /* 호버시 더 진한 배경색 */
 }
 
-/* 메인 컨텐츠가 헤더 아래에 위치하도록 패딩 추가 */
+/* 메인 콘텐츠에 헤더 아래 패딩 조정 */
 main {
-  padding-top: 80px; /* 헤더 높이에 맞게 조정하세요 */
+  padding-top: 80px; /* 고정 헤더에 맞춰 패딩 조정 */
 }
 
 /* 섹션 스타일 */
 section {
-  padding: 50px 20px;
-  text-align: left;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 10px;
+  padding: 50px 20px; /* 섹션 내부 패딩 */
+  text-align: left; /* 왼쪽 정렬 */
+  background-color: white; /* 섹션 배경색 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  margin: 20px auto; /* 가운데 정렬 */
+  max-width: 800px; /* 최대 너비 */
+  border-radius: 10px; /* 둥근 테두리 */
 }
 
 section h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2em; /* 섹션 제목 글꼴 크기 */
+  margin-bottom: 20px; /* 아래 여백 설정 */
 }
 
 section h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.5em; /* 부제목 글꼴 크기 */
+  margin-bottom: 10px; /* 아래 여백 설정 */
 }
 
 section p {
-  line-height: 1.6;
+  line-height: 1.6; /* 단락 줄 높이 */
+}
+
+/* 특정 요소에 글꼴 설정 */
+ul.clearfix li h3,
+ul.experience-list li,
+ul.military-list li {
+  font-family: "Noto Sans KR", sans-serif; /* 특정 글꼴 지정 */
+}
+
+/* 다른 글꼴 스타일 지정 */
+ul.experience-list li i,
+ul.military-list li i {
+  font-family: "Noto Sans KR", sans-serif; /* 특정 글꼴 지정 */
 }
 
 /* 팀 섹션 스타일 */
 #team {
-  padding: 50px 0;
-  text-align: center;
-  background-color: #fff;
+  padding: 50px 0; /* 팀 섹션 내부 패딩 */
+  text-align: center; /* 가운데 정렬 */
+  background-color: #fff; /* 배경색 */
 }
 
 #team .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px; /* 최대 너비 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0 20px; /* 좌우 패딩 */
 }
 
 #team h2 {
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  color: #333;
+  margin-bottom: 30px; /* 아래 여백 설정 */
+  font-size: 2.5em; /* 글꼴 크기 */
+  color: #333; /* 색상 */
 }
 
 .team {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: flex; /* 플렉스 박스로 표시 */
+  justify-content: space-around; /* 주변 공간을 통해 정렬 */
+  flex-wrap: wrap; /* 줄 바꿈 설정 */
 }
 
 .team_member {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 32px;
-  text-align: center;
-  flex-basis: calc(25% - 40px);
-  box-sizing: border-box;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9; /* 배경색 */
+  border-radius: 10px; /* 둥근 테두리 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  margin: 20px; /* 마진 설정 */
+  padding: 32px; /* 패딩 */
+  text-align: center; /* 가운데 정렬 */
+  flex-basis: calc(25% - 40px); /* 유연한 기본 너비 설정 */
+  box-sizing: border-box; /* 박스 모델 설정 */
+  transition: transform 0.3s, box-shadow 0.3s; /* 변형 및 그림자 전환 애니메이션 */
 }
 
 .team_member img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 15px;
+  border-radius: 50%; /* 원형 이미지 */
+  width: 150px; /* 너비 */
+  height: 150px; /* 높이 */
+  object-fit: cover; /* 객체 적합 */
+  margin-bottom: 15px; /* 아래 여백 설정 */
 }
 
 .team_member h3 {
-  margin: 10px 0;
-  font-size: 1.5em;
-  color: #333;
+  margin: 10px 0; /* 여백 설정 */
+  font-size: 1.5em; /* 글꼴 크기 */
+  color: #333; /* 색상 */
 }
 
 .team_member p {
-  font-size: 1em;
-  color: #777;
+  font-size: 1em; /* 글꼴 크기 */
+  color: #777; /* 색상 */
 }
 
 .team_member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* 호버 시 이동 효과 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 더 진한 그림자 효과 */
 }
 
-.project {
-  margin-bottom: 40px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  padding-bottom: 60px; /* backToTop 버튼의 높이를 고려하여 여백 추가 */
-}
-
-/* backToTop 버튼 스타일 */
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: opacity 0.3s;
-}
-
-#backToTop:hover {
-  background-color: #555;
-}
-
-/* 프로필 섹션 스타일 */
-#about {
-  background-color: #fff;
-  padding: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#about h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#about ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-#about ul li {
-  margin-bottom: 20px;
-}
-
-#about ul li::before {
-  content: "\2022"; /* 블릿 마크 작성 */
-  color: #333;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-#about ul li p {
-  margin: 5px 0;
-}
-
-#about img {
-  max-width: 15%;
-  border-radius: 20%; /* 사진을 원형으로 만듦 */
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.experience-list,
-.military-list {
-  list-style: none;
-  padding: 0;
-  margin-left: 20px; /* 아이콘과 텍스트 사이 여백 조절 */
-}
-
-.experience-list li,
-.military-list li {
-  margin-bottom: 5px;
-}
-
-.experience-list li i,
-.military-list li i {
-  margin-right: 10px; /* 아이콘과 텍스트 사이 여백 조절 */
-}
-
-/* ------------------------ */
-
-/* 전체 섹션 스타일 */
-#contact {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* 제목 스타일 */
-#contact h1 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* 이메일 스타일 */
-#contact p {
-  font-size: 1.2em;
-  color: #666;
-  text-align: center;
-}
-
-#contact a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* 폼 스타일 */
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact form p {
-  font-size: 1em;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-/* 입력 필드 스타일 */
-#contact form input[type="text"] {
-  width: 100%;
-  max-width: 500px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-/* 버튼 스타일 */
-#contact .button_1 {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-#contact .button_1:hover {
-  background-color: #0056b3;
-}
-
-/* 메시지 박스 스타일 */
-#messageBox {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 10px;
-  border: 1px solid #c3e6cb;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-#contactForm,
-#surveyForm {
-  margin: 20px 0;
-}
-
-.button_1 {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button_1:hover {
-  background-color: #45a049;
-}
-
-.like-section {
-  margin-top: 20px;
-}
-
-.like-btn {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.rating {
-  display: flex;
-  direction: row;
-}
-
-.star {
-  font-size: 24px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.star:hover,
-.star.selected {
-  color: #f39c12;
-}
-
-#messageBox,
-#surveyMessageBox {
-  margin-top: 10px;
-  color: green;
-}
-
-/* ------------------ */
+/* 프로젝트 섹션 스타일 */
 #projects {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 20px auto;
+  background-color: #f9f9f9; /* 배경색 */
+  padding: 20px; /* 패딩 */
+  border-radius: 10px; /* 둥근 테두리 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  max-width: 800px; /* 최대 너비 */
+  margin: 20px auto; /* 가운데 정렬 */
 }
 
 #projects h1 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-  border-bottom: 2px solid #9391b7;
-  padding-bottom: 10px;
+  font-size: 2em; /* 글꼴 크기 */
+  color: #333; /* 색상 */
+  margin-bottom: 20px; /* 아래 여백 설정 */
+  text-align: center; /* 가운데 정렬 */
+  border-bottom: 2px solid #9391b7; /* 아래 테두리 */
+  padding-bottom: 10px; /* 아래 패딩 */
 }
 
-.project,
-.study_img,
-.pdf-container {
-  margin-bottom: 20px;
+.project {
+  margin-bottom: 40px; /* 아래 여백 설정 */
 }
 
-.project h2,
-.study_img h2 {
-  font-size: 1.5em;
-  color: #5c6875;
+.project h2 {
+  font-size: 1.5em; /* 글꼴 크기 */
+  color: #5c6875; /* 색상 */
 }
 
-.project a,
-.study_img a {
-  color: #3e566f;
-  text-decoration: none;
+.project a {
+  color: #3e566f; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
 }
 
-.project a:hover,
-.study_img a:hover {
-  text-decoration: underline;
+.project a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
 }
 
 .project ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* 리스트 스타일 제거 */
+  padding: 0; /* 패딩 제거 */
 }
 
 .project ul li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* 아이템 간격 설정 */
 }
 
 .study_img {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex; /* 플렉스 박스로 요소들을 나열 */
+  flex-wrap: wrap; /* 요소들을 여러 줄에 걸쳐 정렬 */
+  justify-content: space-between; /* 주변 여백을 통해 요소들 정렬 */
 }
 
 .study_img .link {
-  text-align: center;
-  margin: 10px;
+  text-align: center; /* 가운데 정렬 */
+  margin: 10px; /* 마진 설정 */
 }
 
 .study_img img {
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  border-radius: 10px; /* 둥근 테두리 설정 */
+  transition: transform 0.3s ease; /* 변형 애니메이션 설정 */
 }
 
 .study_img img:hover {
-  transform: scale(1.1);
-}
-
-/* 버튼 수정 */
-.toggle-btn {
-  background-color: #617891;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.toggle-btn:hover {
-  background-color: #2e31e2;
+  transform: scale(1.1); /* 호버 시 확대 효과 */
 }
 
 /* PDF 컨테이너 스타일 */
 .pdf-container {
-  display: none;
-  margin-top: 10px;
+  display: none; /* 초기에는 보이지 않음 */
+  margin-top: 10px; /* 위쪽 여백 설정 */
+}
+
+/* 프로필 섹션 스타일 */
+#about {
+  background-color: #fff; /* 배경색 설정 */
+  padding: 50px; /* 패딩 설정 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  border-radius: 10px; /* 둥근 테두리 설정 */
+  text-align: center; /* 가운데 정렬 */
+  margin-bottom: 40px; /* 아래 여백 설정 */
+}
+
+#about h1 {
+  font-size: 2.5em; /* 글꼴 크기 설정 */
+  margin-bottom: 20px; /* 아래 여백 설정 */
+}
+
+#about ul {
+  list-style: none; /* 리스트 스타일 제거 */
+  padding: 0; /* 패딩 제거 */
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+#about ul li {
+  margin-bottom: 20px; /* 아래 여백 설정 */
+}
+
+#about ul li::before {
+  content: "\2022"; /* 블릿 마크 작성 */
+  color: #333; /* 색상 설정 */
+  display: inline-block; /* 인라인 요소로 표시 */
+  width: 1em; /* 너비 설정 */
+  margin-left: -1em; /* 왼쪽 여백 설정 */
+}
+
+#about ul li p {
+  margin: 5px 0; /* 단락 여백 설정 */
+}
+
+#about img {
+  max-width: 15%; /* 최대 너비 설정 */
+  border-radius: 20%; /* 둥근 모서리 설정 */
+  margin-top: 20px; /* 위쪽 여백 설정 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 연락처 섹션 스타일 */
+#contact {
+  background-color: #f9f9f9; /* 배경색 설정 */
+  padding: 20px; /* 패딩 설정 */
+  border-radius: 10px; /* 둥근 테두리 설정 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  max-width: 600px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+#contact h1 {
+  font-size: 2em; /* 글꼴 크기 설정 */
+  color: #333; /* 색상 설정 */
+  margin-bottom: 10px; /* 아래 여백 설정 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+#contact p {
+  font-size: 1.2em; /* 글꼴 크기 설정 */
+  color: #666; /* 색상 설정 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+#contact a {
+  color: #007bff; /* 링크 색상 설정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+
+#contact a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+#contact form {
+  display: flex; /* 플렉스 박스로 요소들을 나열 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 가운데 정렬 */
+}
+
+#contact form p {
+  font-size: 1em; /* 글꼴 크기 설정 */
+  color: #333; /* 색상 설정 */
+  margin-bottom: 5px; /* 아래 여백 설정 */
+}
+
+#contact form input[type="text"] {
+  width: 100%; /* 너비 설정 */
+  max-width: 500px; /* 최대 너비 설정 */
+  padding: 10px; /* 패딩 설정 */
+  margin-bottom: 10px; /* 아래 여백 설정 */
+  border: 1px solid #ccc; /* 테두리 설정 */
+  border-radius: 5px; /* 둥근 테두리 설정 */
+  font-size: 1em; /* 글꼴 크기 설정 */
+}
+
+#contact .button_1 {
+  background-color: #007bff; /* 배경색 설정 */
+  color: white; /* 글자색 설정 */
+  padding: 10px 20px; /* 패딩 설정 */
+  border: none; /* 테두리 없음 */
+  border-radius: 5px; /* 둥근 테두리 설정 */
+  font-size: 1em; /* 글꼴 크기 설정 */
+  cursor: pointer; /* 커서 모양 설정 */
+}
+
+#contact .button_1:hover {
+  background-color: #0056b3; /* 호버 시 배경색 변경 */
+}
+
+#messageBox {
+  background-color: #d4edda; /* 배경색 설정 */
+  color: #155724; /* 글자색 설정 */
+  padding: 10px; /* 패딩 설정 */
+  border: 1px solid #c3e6cb; /* 테두리 설정 */
+  border-radius: 5px; /* 둥근 테두리 설정 */
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 10px; /* 위쪽 여백 설정 */
+}
+
+#contactForm,
+#surveyForm {
+  margin: 20px 0; /* 여백 설정 */
+}
+
+/* 버튼 수정 */
+.toggle-btn {
+  background-color: #617891; /* 배경색 설정 */
+  border: none; /* 테두리 없음 */
+  color: white; /* 글자색 설정 */
+  padding: 10px 20px; /* 패딩 설정 */
+  text-align: center; /* 가운데 정렬 */
+  text-decoration: none; /* 밑줄 제거 */
+  display: inline-block; /* 인라인 블록으로 표시 */
+  font-size: 16px; /* 글꼴 크기 설정 */
+  margin: 4px 2px; /* 마진 설정 */
+  cursor: pointer; /* 커서 모양 설정 */
+  border-radius: 8px; /* 둥근 테두리 설정 */
+}
+
+.toggle-btn:hover {
+  background-color: #2e31e2; /* 호버 시 배경색 변경 */
 }
 
 /* 반응형 디자인 */
 @media (max-width: 600px) {
   #projects {
-    padding: 15px;
+    padding: 15px; /* 패딩 설정 */
   }
 
   .study_img {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 가운데 정렬 */
   }
 
   .study_img .link {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* 아래 여백 설정 */
   }
 
   .toggle-btn {
-    width: 100%;
-    padding: 12px;
+    width: 100%; /* 너비 설정 */
+    padding: 12px; /* 패딩 설정 */
   }
 }
 
-/* 좋아요 */
+/* 좋아요 섹션 스타일 */
 .like-section {
-  margin-top: 20px;
-  position: relative; /* For heart effect positioning */
+  margin-top: 20px; /* 위쪽 여백 설정 */
 }
 
 .like-btn {
-  background-color: #ff4081; /* Pink background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  width: 50px; /* Width */
-  height: 50px; /* Height */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make it look like a block element */
-  font-size: 24px; /* Increase font size */
-  line-height: 50px; /* Center text vertically */
-  margin: 4px 2px; /* Add some margin */
-  cursor: pointer; /* Add cursor pointer on hover */
-  border-radius: 50%; /* Rounded corners */
-  position: relative; /* For heart effect positioning */
+  background-color: #ff4081; /* 배경색 설정 */
+  border: none; /* 테두리 없음 */
+  color: white; /* 글자색 설정 */
+  width: 50px; /* 너비 설정 */
+  height: 50px; /* 높이 설정 */
+  text-align: center; /* 가운데 정렬 */
+  text-decoration: none; /* 밑줄 제거 */
+  display: inline-block; /* 인라인 블록으로 표시 */
+  font-size: 24px; /* 글꼴 크기 설정 */
+  line-height: 50px; /* 높이 설정 */
+  margin: 4px 2px; /* 마진 설정 */
+  cursor: pointer; /* 커서 모양 설정 */
+  border-radius: 50%; /* 둥근 테두리 설정 */
+  position: relative; /* 상대 위치 설정 */
 }
 
 .like-btn:hover {
-  background-color: #e91e63; /* Darker pink on hover */
+  background-color: #e91e63; /* 호버 시 배경색 변경 */
 }
 
 #likeCount {
-  font-size: 16px;
-  margin-left: 10px;
-  vertical-align: middle;
+  font-size: 16px; /* 글꼴 크기 설정 */
+  margin-left: 10px; /* 왼쪽 여백 설정 */
+  vertical-align: middle; /* 세로 정렬 설정 */
 }
 
 /* Heart effect */
 .heart {
-  color: red;
-  font-size: 24px;
-  position: absolute;
-  animation: float 1s ease-in-out forwards;
+  color: red; /* 색상 설정 */
+  font-size: 24px; /* 글꼴 크기 설정 */
+  position: absolute; /* 절대 위치 설정 */
+  animation: float 1s ease-in-out forwards; /* 애니메이션 설정 */
 }
 
 @keyframes float {
   0% {
-    opacity: 1;
-    bottom: 0;
+    opacity: 1; /* 불투명도 설정 */
+    bottom: 0; /* 아래 위치 설정 */
   }
+
   100% {
-    opacity: 0;
-    bottom: 50px;
+    opacity: 0; /* 불투명도 설정 */
+    bottom: 50px; /* 아래 위치 설정 */
   }
 }
+
+/* 푸터 스타일 */
+footer {
+  background-color: #333; /* 배경색 설정 */
+  color: white; /* 글자색 설정 */
+  text-align: center; /* 가운데 정렬 */
+  padding: 1em 0; /* 패딩 설정 */
+  position: relative; /* 상대 위치 설정 */
+  width: 100%; /* 너비 설정 */
+  bottom: 0; /* 아래 위치 설정 */
+  padding-bottom: 60px; /* 하단 여백 설정 */
+  /* backToTop 버튼의 높이를 고려하여 여백 추가 */
+}
+
+/* backToTop 버튼 스타일 */
+#backToTop {
+  display: none; /* 초기에는 보이지 않음 */
+  position: fixed; /* 고정 위치 설정 */
+  bottom: 20px; /* 아래 위치 설정 */
+  right: 20px; /* 우측 위치 설정 */
+  z-index: 1000; /* 쌓임 순서 설정 */
+  font-size: 16px; /* 글꼴 크기 설정 */
+  border: none; /* 테두리 없음 */
+  outline: none; /* 아웃라인 없음 */
+  background-color: #333; /* 배경색 설정 */
+  color: white; /* 글자색 설정 */
+  cursor: pointer; /* 커서 모양 설정 */
+  padding: 10px 20px; /* 패딩 설정 */
+  border-radius: 5px; /* 둥근 테두리 설정 */
+  transition: opacity 0.3s; /* 투명도 전환 애니메이션 */
+}
+
+#backToTop:hover {
+  background-color: #555; /* 호버 시 배경색 변경 */
+}
+
